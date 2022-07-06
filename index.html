@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgba(216, 246, 246, 0.658);
+            text-align: center;
+        }
+        button{
+            background-color: black;
+            color: white;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Average Calculator</h1>
+    <form onsubmit="calculate(); return false;">
+        <label for="subject1">Subject1:</label>
+        <input type="number" required min="1" placeholder="Enter Subject1 Marks" id="subject1"> <br>
+
+        <label for="subject2">Subject2:</label>
+        <input type="number" required min="1" placeholder="Enter Subject2 Marks" id="subject2"> <br>
+
+        <label for="subject3">Subject3:</label>
+        <input type="number" required min="1" placeholder="Enter Subject3 Marks" id="subject3"> <br>
+
+        <label for="subject4">Subject4:</label>
+        <input type="number" required min="1" placeholder="Enter Subject4 Marks" id="subject4" > <br>
+        
+
+        <label for="subject5">Subject5:</label>
+        <input type="number" required min="1" placeholder="Enter Subject5 Marks" id="subject5"> <br> <br>
+
+        <button type="submit">CHECK</button>
+
+       
+
+
+
+
+
+
+
+    </form>
+
+    <h4 id="totalMarks"></h4>
+    <h4 id="result"></h4>
+
+
+
+
+
+
+
+    <script>
+        function calculate (){
+            let subject1 = document.querySelector("#subject1").value;
+
+            let subject2 = document.querySelector("#subject2").value;
+
+            let subject3 = document.querySelector("#subject3").value;
+
+            let subject4 = document.querySelector("#subject4").value;
+
+            let subject5 = document.querySelector("#subject5").value;
+            let totalMarks = parseInt(subject1) + parseInt(subject2) + parseInt(subject3) + parseInt(subject4) + parseInt(subject5);
+           
+            document.querySelector("#totalMarks").innerHTML = `your total Marks are ${totalMarks}`;
+            let result = totalMarks / 5;
+            document.querySelector("#result").innerHTML = `your Average marks is ${result}%`;
+
+        }
+    </script>
+</body>
+
+</html>
